@@ -1,0 +1,12 @@
+.eslintrc.js
+.git
+.github
+.gitignore
+.npmignore
+.npmrc
+.tool-versions
+coverage
+node_modules
+__tests__
+src
+yarn-error.log
