@@ -1,9 +1,19 @@
 {
   "name": "@litcrits/web-components",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "lit crits web components",
   "author": "Mike Hoffert",
   "main": "dist/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/litcrits/web-components"
+  },
+  "keywords": [
+    "web",
+    "components",
+    "react",
+    "litcrits"
+  ],
   "files": [
     "dist"
   ],
