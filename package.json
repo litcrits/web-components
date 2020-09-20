@@ -1,6 +1,6 @@
 {
   "name": "@litcrits/web-components",
-  "version": "0.0.5",
+  "version": "0.1.0",
   "description": "lit crits web components",
   "author": "Mike Hoffert",
   "main": "dist/index.js",
@@ -48,6 +48,7 @@
     "react-onclickoutside": "6.9.0",
     "react-router": "5.1.2",
     "react-router-dom": "5.1.2",
+    "storybook-addon-jsx": "^7.3.4",
     "unfetch": "^4.1.0"
   },
   "devDependencies": {
