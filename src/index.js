@@ -4,6 +4,7 @@ import Field from './components/field';
 import HelperText from './components/helperText';
 import Input from './components/input';
 import Label from './components/label';
+import PrivateRoute from './components/privateRoute';
 import Setup from './components/setup';
 import { apolloClient } from './utilities/networkRequest';
 
@@ -18,5 +19,6 @@ export {
   HelperText,
   Input,
   Label,
+  PrivateRoute,
   Setup,
 };
