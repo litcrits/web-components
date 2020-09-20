@@ -40,7 +40,7 @@ function Field({
 }
 
 Field.propTypes = {
-  autoComplete: PropTypes.bool,
+  autoComplete: PropTypes.string,
   autoFocus: PropTypes.bool,
   error: PropTypes.string,
   isDisabled: PropTypes.bool,

@@ -38,7 +38,7 @@ function Input({
 }
 
 Input.propTypes = {
-  autoComplete: PropTypes.bool,
+  autoComplete: PropTypes.string,
   autoFocus: PropTypes.bool,
   isDisabled: PropTypes.bool,
   name: PropTypes.string.isRequired,
