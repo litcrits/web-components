@@ -8,13 +8,13 @@ const InputStyle = styled.input({
     fontSize: '1rem',
     lineHeight: '1.25rem',
     padding: '0.25rem 0.5rem',
-    backgroundColor: 'rgba(255, 255, 255, 0.5)',
   },
 },
 ({ theme: { colors } }) => ({
   '&.input': {
     border: `1px solid ${colors.border}`,
     color: colors.text,
+    backgroundColor: colors.menuBackground,
   },
 }));
 

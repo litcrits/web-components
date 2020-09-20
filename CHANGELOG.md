@@ -1,3 +1,8 @@
+##0.2.0
+* Add hamburger component
+* Add menu component
+* Add className option to button
+
 ##0.1.1
 * Fix button text color with dark theme
 

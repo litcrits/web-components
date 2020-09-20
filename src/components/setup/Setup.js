@@ -8,17 +8,23 @@ const darkTheme = {
     background: '#464646',
     border: '#666666',
     highlight: '#00B08A',
+    menuBackground: '#333333',
+    menuHover: '#464646',
     text: '#EEEEEE',
   },
+  name: 'DARK',
 };
 
 const lightTheme = {
   colors: {
     background: '#FFFBF1',
-    border: '#999999',
+    border: '#DDDDDD',
     highlight: '#00B08A',
+    menuBackground: '#FFFFFF',
+    menuHover: '#F3F3F3',
     text: '#333333',
   },
+  name: 'LIGHT',
 };
 
 const globalStyles = (theme) => css`

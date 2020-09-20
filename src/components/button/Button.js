@@ -1,17 +1,19 @@
 import Classnames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
+import { isNil } from 'lodash';
 import ButtonStyle, { BUTTON_COLORS, BUTTON_SIZES } from './Button.style';
 
 const DEFAULT_COLOR = BUTTON_COLORS.highlight;
 const DEFAULT_SIZE = BUTTON_SIZES.medium;
 
-function Button({ children, color, isDisabled, isFullWidth, onClick, size, type }) {
+function Button({ children, className, color, isDisabled, isFullWidth, onClick, size, type }) {
   const classes = Classnames({
     button: true,
     [`color-${BUTTON_COLORS[color] || DEFAULT_COLOR}`]: true,
     [`size-${BUTTON_SIZES[size] || DEFAULT_SIZE}`]: true,
     'full-width': isFullWidth,
+    [className]: !isNil(className),
   });
 
   return (
@@ -23,6 +25,7 @@ function Button({ children, color, isDisabled, isFullWidth, onClick, size, type 
 
 Button.propTypes = {
   children: PropTypes.any,
+  className: PropTypes.string,
   color: PropTypes.oneOf(Object.values(BUTTON_COLORS)),
   isDisabled: PropTypes.bool,
   isFullWidth: PropTypes.bool,
