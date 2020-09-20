@@ -67,7 +67,7 @@ export default styled.span({
   '&.hamburger-wrapper': {
     'span.hamburger': {
       span: {
-        background: colors.text,
+        background: colors.highlight,
       },
     },
   },

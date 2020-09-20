@@ -2,6 +2,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import { Global, css } from '@emotion/core';
 import { ThemeProvider } from 'emotion-theming';
+import { connect } from 'react-redux';
 
 const darkTheme = {
   colors: {
@@ -74,8 +75,8 @@ const globalStyles = (theme) => css`
   }
 `;
 
-function Setup({ children }) {
-  const isDark = localStorage.getItem('theme') === 'DARK';
+function Setup({ children, theme }) {
+  const isDark = theme === 'DARK';
 
   return (
     <>
@@ -87,8 +88,15 @@ function Setup({ children }) {
   );
 }
 
+export function mapStateToProps({ user }) {
+  return {
+    theme: user.theme,
+  };
+}
+
 Setup.propTypes = {
   children: PropTypes.any,
+  theme: PropTypes.string,
 };
 
-export default Setup;
+export default connect(mapStateToProps)(Setup);

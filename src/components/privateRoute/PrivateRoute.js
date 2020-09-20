@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import { isNil } from 'lodash';
+import { connect } from 'react-redux';
 import { Redirect, Route } from 'react-router-dom';
 
 export function generateRender({ children, isAuthenticated }) {
@@ -17,15 +18,21 @@ export function generateRender({ children, isAuthenticated }) {
   return PrivateRouteRender;
 }
 
-function PrivateRoute({ children, ...rest }) {
-  const accessToken = localStorage.getItem('accessToken');
+function PrivateRoute({ accessToken, children, ...rest }) {
   const isAuthenticated = !isNil(accessToken);
 
   return <Route {...rest} render={generateRender({ children, isAuthenticated })}/>;
 }
 
+export function mapStateToProps({ user }) {
+  return {
+    accessToken: user.accessToken,
+  };
+}
+
 PrivateRoute.propTypes = {
+  accessToken: PropTypes.string,
   children: PropTypes.any,
 };
 
-export default PrivateRoute;
+export default connect(mapStateToProps)(PrivateRoute);

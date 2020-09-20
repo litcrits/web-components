@@ -1,3 +1,8 @@
+##0.3.0
+* Change theme to use redux
+* Change auth to use redux
+* Change hamburger to highlight color
+
 ##0.2.0
 * Add hamburger component
 * Add menu component
