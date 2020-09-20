@@ -18,7 +18,7 @@ const ButtonStyle = styled.button({
   padding: '0.35rem 1rem',
   border: 'none',
   borderRadius: '1rem',
-  boxShadow: '0.15rem 0.15rem 0.5rem rgba(0, 0, 0, 0.5)',
+  boxShadow: '0.15rem 0.15rem 0.5rem rgba(0, 0, 0, 0.25)',
   width: 'fit-content',
   minWidth: 'fit-content',
   cursor: 'pointer',
