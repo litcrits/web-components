@@ -1,3 +1,3 @@
-import ApoloClient from './ApolloClient';
+import ApolloClient from './ApolloClient';
 
 export default ApolloClient;
