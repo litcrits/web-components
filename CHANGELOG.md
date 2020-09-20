@@ -1,3 +1,6 @@
+##0.1.1
+* Fix button text color with dark theme
+
 ##0.1.0
 * Add support for themes
 

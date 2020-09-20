@@ -41,7 +41,7 @@ const ButtonStyle = styled.button({
 ({ theme: { colors } }) => ({
   '&.color-highlight': {
     backgroundColor: colors.highlight,
-    color: colors.background,
+    color: '#EEEEEE',
     fill: colors.background,
 
     ...ripple({
