@@ -1,5 +1,5 @@
 import { hijackEffects } from 'stop-runaway-react-effects';
-import ApolloClient from './utilities/networkRequest';
+import ApolloClient from './components/apolloClient';
 import Button from './components/button';
 import Field from './components/field';
 import HelperText from './components/helperText';
