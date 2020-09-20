@@ -1,6 +1,3 @@
-##0.2.1
-* add onClick to hamburger
-
 ##0.2.0
 * Add hamburger component
 * Add menu component

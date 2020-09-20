@@ -5,7 +5,7 @@ import { isArray } from 'lodash';
 import onClickOutside from 'react-onclickoutside';
 import MenuStyle from './Menu.style';
 
-function Menu({ groups, isOpen, onClick, onClose }) {
+function Menu({ groups, isOpen, onClose }) {
   const classes = classnames({
     active: isOpen,
     menu: true,
@@ -14,7 +14,7 @@ function Menu({ groups, isOpen, onClick, onClose }) {
   Menu.handleClickOutside = onClose;
 
   return (
-    <MenuStyle className={classes} onClick={onClick}>
+    <MenuStyle className={classes}>
       {groups.map((group, groupIndex) => {
         return (
           <li key={groupIndex} className="group">
@@ -41,7 +41,6 @@ Menu.propTypes = {
       onClick: PropTypes.func,
     }))
   ),
-  onClick: PropTypes.func,
   onClose: PropTypes.func,
   // outsideClickIgnoreClass can be passed to onClickOutside to ignore certain classes
   // This can be useful to prevent clickoutside from triggering on the button that opens the menu
@@ -50,7 +49,6 @@ Menu.propTypes = {
 Menu.defaultProps = {
   isOpen: false,
   groups: [],
-  onClick: Function.prototype,
   onClose: Function.prototype,
 };
 
