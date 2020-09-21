@@ -1,4 +1,4 @@
-##0.4.1
+##0.4.2
 * Better zIndex support
 
 ##0.4.0

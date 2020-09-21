@@ -1,6 +1,6 @@
 const indexes = [
-  'menu',
   'slider',
+  'menu',
 ];
 
 const indexObject = {};
