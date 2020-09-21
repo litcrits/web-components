@@ -1,4 +1,5 @@
 import styled from '@emotion/styled';
+import zIndex from '../../utilities/zIndex';
 
 export default styled.ul({
   '&.menu': {
@@ -14,6 +15,7 @@ export default styled.ul({
     margin: 0,
     listStyle: 'none',
     transition: 'opacity 200ms ease',
+    zIndex: zIndex.menu,
 
     '&.active': {
       opacity: 1,

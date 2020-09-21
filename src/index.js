@@ -11,6 +11,7 @@ import Menu from './components/menu';
 import PrivateRoute from './components/privateRoute';
 import Setup from './components/setup';
 import Slider from './components/slider';
+import zIndex from './utilities/zIndex';
 
 if (process.env.NODE_ENV !== 'production') {
   hijackEffects();
@@ -29,4 +30,5 @@ export {
   PrivateRoute,
   Setup,
   Slider,
+  zIndex,
 };

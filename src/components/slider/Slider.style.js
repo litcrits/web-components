@@ -1,4 +1,5 @@
 import styled from '@emotion/styled';
+import zIndex from '../../utilities/zIndex';
 
 export default styled.span({
   '&.slider': {
@@ -35,7 +36,7 @@ export default styled.span({
             borderRadius: '0.1875rem',
             width: '0.5rem',
             height: '0.5rem',
-            zIndex: 1,
+            zIndex: zIndex.slider,
 
             '&.mark': {
               top: '0.1875rem',

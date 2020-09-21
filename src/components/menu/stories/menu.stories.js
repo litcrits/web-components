@@ -39,7 +39,6 @@ const Wrapper = styled.div({
   '.menu.active': {
     right: '20px',
     width: '168px',
-    zIndex: 1,
   },
 });
 
