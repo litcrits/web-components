@@ -1,3 +1,6 @@
+##0.3.1
+* Add fontsize to theme and redux
+
 ##0.3.0
 * Change theme to use redux
 * Change auth to use redux

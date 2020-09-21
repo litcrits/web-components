@@ -45,7 +45,7 @@ const globalStyles = (theme) => css`
     box-sizing: border-box;
     height: 100%;
     font-family: Roboto, sans-serif;
-    font-size: 16px;
+    font-size: ${theme.fontSize}px;
     background-color: ${theme.colors.background};
     color: ${theme.colors.text};
 
@@ -75,12 +75,16 @@ const globalStyles = (theme) => css`
   }
 `;
 
-function Setup({ children, theme }) {
+function Setup({ children, fontSize, theme }) {
   const isDark = theme === 'DARK';
+  const themeValue = isDark ? darkTheme : lightTheme;
 
   return (
     <>
-      <ThemeProvider theme={isDark ? darkTheme : lightTheme}>
+      <ThemeProvider theme={{
+        ...themeValue,
+        fontSize,
+      }}>
         <Global styles={globalStyles}/>
         {children}
       </ThemeProvider>
@@ -90,6 +94,7 @@ function Setup({ children, theme }) {
 
 export function mapStateToProps({ user }) {
   return {
+    fontSize: user.fontSize || 16,
     theme: user.theme,
   };
 }
