@@ -1,3 +1,6 @@
+##0.4.0
+* Slider component
+
 ##0.3.1
 * Add fontsize to theme and redux
 

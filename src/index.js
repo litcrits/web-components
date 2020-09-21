@@ -10,6 +10,7 @@ import Label from './components/label';
 import Menu from './components/menu';
 import PrivateRoute from './components/privateRoute';
 import Setup from './components/setup';
+import Slider from './components/slider';
 
 if (process.env.NODE_ENV !== 'production') {
   hijackEffects();
@@ -27,4 +28,5 @@ export {
   Menu,
   PrivateRoute,
   Setup,
+  Slider,
 };

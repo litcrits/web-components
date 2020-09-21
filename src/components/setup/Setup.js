@@ -94,14 +94,20 @@ function Setup({ children, fontSize, theme }) {
 
 export function mapStateToProps({ user }) {
   return {
-    fontSize: user.fontSize || 16,
+    fontSize: user.fontSize,
     theme: user.theme,
   };
 }
 
 Setup.propTypes = {
   children: PropTypes.any,
+  fontSize: PropTypes.number,
   theme: PropTypes.string,
+};
+
+Setup.defaultProps = {
+  fontSize: 16,
+  theme: 'LIGHT',
 };
 
 export default connect(mapStateToProps)(Setup);
