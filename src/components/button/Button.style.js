@@ -13,20 +13,20 @@ export const BUTTON_SIZES = {
 };
 
 const ButtonStyle = styled.button({
-  fontSize: '1rem',
-  lineHeight: '1.25rem',
-  padding: '0.35rem 1rem',
+  fontSize: '1em',
+  lineHeight: '1.25em',
+  padding: '0.35em 1em',
   border: 'none',
-  borderRadius: '1rem',
-  boxShadow: '0.15rem 0.15rem 0.5rem rgba(0, 0, 0, 0.25)',
+  borderRadius: '1em',
+  boxShadow: '0.15em 0.15em 0.5em rgba(0, 0, 0, 0.25)',
   width: 'fit-content',
   minWidth: 'fit-content',
   cursor: 'pointer',
 
   '&.size-large': {
-    fontSize: '1.25rem',
-    lineHeight: '1.5rem',
-    padding: '0.5rem 1.25rem',
+    fontSize: '1.25em',
+    lineHeight: '1.5em',
+    padding: '0.5em 1.25em',
   },
 
   '&:disabled': {

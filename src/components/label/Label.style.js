@@ -3,9 +3,9 @@ import styled from '@emotion/styled';
 export default styled.label({
   '&.label': {
     display: 'block',
-    fontSize: '0.75rem',
-    lineHeight: '1rem',
-    padding: '0.75rem 0.5rem 0.1rem',
+    fontSize: '0.75em',
+    lineHeight: '1em',
+    padding: '0.75em 0.5em 0.1em',
 
     '.required-asterisk': {
       marginLeft: '2px',

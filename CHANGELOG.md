@@ -1,3 +1,6 @@
+##0.5.0
+* Switch to em instead of rem
+
 ##0.4.2
 * Better zIndex support
 

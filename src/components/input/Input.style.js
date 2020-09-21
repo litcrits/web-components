@@ -4,10 +4,10 @@ const InputStyle = styled.input({
   '&.input': {
     width: '100%',
     maxWidth: '100%',
-    borderRadius: '0.5rem',
-    fontSize: '1rem',
-    lineHeight: '1.25rem',
-    padding: '0.25rem 0.5rem',
+    borderRadius: '0.5em',
+    fontSize: '1em',
+    lineHeight: '1.25em',
+    padding: '0.25em 0.5em',
   },
 },
 ({ theme: { colors } }) => ({

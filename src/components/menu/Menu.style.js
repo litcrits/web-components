@@ -9,9 +9,9 @@ export default styled.ul({
     position: 'absolute',
     right: 0,
     width: '100%',
-    borderRadius: '0.5rem',
+    borderRadius: '0.5em',
     boxShadow: '0px 2px 4px -1px rgba(0, 0, 0, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12)',
-    padding: '0.5rem 0',
+    padding: '0.5em 0',
     margin: 0,
     listStyle: 'none',
     transition: 'opacity 200ms ease',
@@ -24,8 +24,8 @@ export default styled.ul({
 
     'li.group': {
       '&:not(:last-of-type)': {
-        paddingBottom: '0.5rem',
-        marginBottom: '0.5rem',
+        paddingBottom: '0.5em',
+        marginBottom: '0.5em',
       },
 
       'ul.group-items': {
@@ -34,10 +34,10 @@ export default styled.ul({
         listStyle: 'none',
 
         'li.group-item': {
-          height: '3rem',
-          lineHeight: '3rem',
+          height: '3em',
+          lineHeight: '3em',
           width: '100%',
-          padding: '0 1.5rem',
+          padding: '0 1.5em',
           cursor: 'pointer',
         },
       },
