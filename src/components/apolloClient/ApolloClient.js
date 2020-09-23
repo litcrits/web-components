@@ -2,14 +2,15 @@ import fetch from 'unfetch';
 import PropTypes from 'prop-types';
 import React from 'react';
 import { isNil } from 'lodash';
-import { ApolloClient, ApolloProvider, HttpLink, InMemoryCache } from '@apollo/client';
+import { connect } from 'react-redux';
+import { ApolloClient, ApolloLink, ApolloProvider, BatchHttpLink, InMemoryCache } from '@apollo/client';
 
 /**
  * Create apollo provider client
  *
  * @returns {object} client - Apollo client
  */
-export function createClient() {
+export function createClient({ accessToken }) {
   return new ApolloClient({
     cache: new InMemoryCache({}),
     defaultOptions: {
@@ -26,18 +27,20 @@ export function createClient() {
         fetchPolicy: 'no-cache',
       },
     },
-    link: new HttpLink({
-      fetch,
-      headers: {
-        Authorization: 'Bearer test',
-      },
-      uri: 'http://localhost:3884/graphql',
-    }),
+    link: ApolloLink.from([
+      new BatchHttpLink({
+        fetch,
+        headers: {
+          Authorization: isNil(accessToken) ? '' : `Bearer ${accessToken}`,
+        },
+        uri: 'http://localhost:3884/graphql',
+      }),
+    ]),
   });
 }
 
-function Apollo({ children }) {
-  const [client] = React.useState(createClient());
+function Apollo({ children, accessToken }) {
+  const [client] = React.useState(createClient({ accessToken }));
 
   if (isNil(client)) return null;
 
@@ -45,7 +48,14 @@ function Apollo({ children }) {
 }
 
 Apollo.propTypes = {
+  accessToken: PropTypes.string,
   children: PropTypes.any,
 };
 
-export default Apollo;
+function mapStateToProps({ user }) {
+  return {
+    accessToken: user.accessToken,
+  };
+}
+
+export default connect(mapStateToProps)(Apollo);

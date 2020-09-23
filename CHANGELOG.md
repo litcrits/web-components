@@ -1,3 +1,6 @@
+##0.5.1
+* Add accessToken to api requests
+
 ##0.5.0
 * Switch to em instead of rem
 
