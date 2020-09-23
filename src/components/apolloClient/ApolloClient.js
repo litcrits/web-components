@@ -3,7 +3,8 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import { isNil } from 'lodash';
 import { connect } from 'react-redux';
-import { ApolloClient, ApolloLink, ApolloProvider, BatchHttpLink, InMemoryCache } from '@apollo/client';
+import { BatchHttpLink } from '@apollo/client/link/batch-http';
+import { ApolloClient, ApolloLink, ApolloProvider, InMemoryCache } from '@apollo/client';
 
 /**
  * Create apollo provider client

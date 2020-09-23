@@ -1,6 +1,6 @@
 {
   "name": "@litcrits/web-components",
-  "version": "0.5.1",
+  "version": "0.5.2",
   "description": "lit crits web components",
   "author": "Mike Hoffert",
   "main": "dist/index.js",
