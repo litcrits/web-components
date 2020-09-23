@@ -3,8 +3,8 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import { isNil } from 'lodash';
 import { connect } from 'react-redux';
-import { BatchHttpLink } from '@apollo/client/link/batch-http';
-import { ApolloClient, ApolloLink, ApolloProvider, InMemoryCache } from '@apollo/client';
+import { ApolloClient, ApolloLink, ApolloProvider, HttpLink, InMemoryCache } from '@apollo/client';
+//import { BatchHttpLink } from '@apollo/client/link/batch-http';
 
 /**
  * Create apollo provider client
@@ -29,7 +29,7 @@ export function createClient({ accessToken }) {
       },
     },
     link: ApolloLink.from([
-      new BatchHttpLink({
+      new HttpLink({
         fetch,
         headers: {
           Authorization: isNil(accessToken) ? '' : `Bearer ${accessToken}`,

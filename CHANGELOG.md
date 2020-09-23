@@ -1,4 +1,4 @@
-##0.5.2
+##0.5.3
 * Add accessToken to api requests
 
 ##0.5.0
